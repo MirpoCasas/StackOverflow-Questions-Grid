@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import DoneGrid from './components/DoneGrid';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <header>
+      <div>
+        <h1>Hi Kishan! I hope this is what you were expecting!</h1>
+        <p className='Desc'>I learned to use the library with YouTube tutorials and had to polish my API knowledge but managed to make it work! Sorry for the delay, I was finishing learnging TypeScript for this.</p>
+      </div>
+      <div className="GridCont">
+        <DoneGrid/>
+      </div>
+    </header>
   );
 }
 
