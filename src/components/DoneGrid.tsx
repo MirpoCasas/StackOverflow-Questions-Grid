@@ -32,15 +32,25 @@ const DoneGrid = () => {
 
   const [tableData, setTableData] = useState([])
 
-  useEffect(() => {
-    fetch(URL)
-      .then((data) => data.json())
-      .then((data) => setTableData(data.items))
-      
-  })
 
+  useEffect(() => {
+      fetch(URL)
+        .then((res) => {
+          if (res.ok) {
+            console.log('Success')
+            return res.json()
+          } else {
+            console.log('Not Successful')
+          }
+        })
+        .then((data) => setTableData(data.items))
+  });
+
+
+
+  
   return (
-    <div style={{ height: 600, width: '100%' }}>
+    <div style={{ height: 700, width: '100%' }}>
       <DataGrid
         rows={tableData}
         columns={columns}
